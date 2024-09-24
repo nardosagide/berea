@@ -170,6 +170,23 @@
         </div>
       </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </div>
   <div class="form-row">
     <div class="col-md-6 mb-3">
@@ -193,20 +210,125 @@
         Please provide a valid zip.
       </div>
     </div>
+
+
+
+
+
+
+
+
+
   </div>
   <div class="form-group">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
       <label class="form-check-label" for="invalidCheck">
-        Agree to terms and conditions
+     <a href="rule.html">   Agree to terms and conditions </a>
       </label>
       <div class="invalid-feedback">
         You must agree before submitting.
       </div>
     </div>
   </div>
-  <button class="btn btn-primary" type="submit">Submit form</button>
+  <button class="btn btn-primary" type="submit">into Berea</button>
 </form>
+
+
+
+
+
+
+
+
+<script>
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission if validation fails
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        } else {
+          event.preventDefault(); // Prevent actual form submission for processing
+
+          form.classList.add('was-validated');
+
+          // Capture user input values
+          var firstName = document.getElementById('validationCustom01').value;
+          var lastName = document.getElementById('validationCustom02').value;
+          var username = document.getElementById('validationCustomUsername').value;
+          var city = document.getElementById('validationCustom03').value;
+          var state = document.getElementById('validationCustom04').value;
+          var zip = document.getElementById('validationCustom05').value;
+          var agreed = document.getElementById('invalidCheck').checked;
+
+          // Log the captured values to the console (or process them as needed)
+          console.log('First Name:', firstName);
+          alert(firstName)
+          console.log('Last Name:', lastName);
+          console.log('Username:', username);
+          console.log('City:', city);
+          console.log('State:', state);
+          console.log('Zip:', zip);
+          console.log('Agreed to Terms:', agreed);
+
+          // Example: You could send the data via AJAX or handle it here
+          // submitFormData(firstName, lastName, username, city, state, zip, agreed);
+        }
+      }, false);
+    });
+  }, false);
+})();
+
+// Example function to submit form data (AJAX or any other processing)
+function submitFormData(firstName, lastName, username, city, state, zip, agreed) {
+  // You can process or send the data to a server here
+  alert(`Submitted Data:
+    First Name: ${firstName}
+    Last Name: ${lastName}
+    Username: ${username}
+    City: ${city}
+    State: ${state}
+    Zip: ${zip}
+    Agreed to Terms: ${agreed}`);
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+
 
 <script>
 // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -223,10 +345,11 @@
           event.stopPropagation();
         }
         form.classList.add('was-validated');
+
       }, false);
     });
   }, false);
-})();
+} )();
 </script>
 
 
@@ -235,7 +358,7 @@
 
 
 
-
+-->
 
 
 
