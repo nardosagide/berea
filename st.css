@@ -58,7 +58,8 @@ body
 }
 .sec span:hover 
 {
-  background: #0f0;
+ 
+  background: #27a776;
   transition: 0s;
 }
 
@@ -75,6 +76,12 @@ body
   border-radius: 4px;
   box-shadow: 0 15px 35px rgba(0,0,0,9);
 }
+
+
+
+
+
+
 .sec .signin .content 
 {
   position: relative;
@@ -153,7 +160,7 @@ body
 .signin .content .form .inputBox input[type="submit"]
 {
   padding: 10px;
-  background: #0f0;
+  background: #27a776;
   color: #000;
   font-weight: 600;
   font-size: 1.35em;
